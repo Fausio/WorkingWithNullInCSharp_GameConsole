@@ -11,13 +11,7 @@ namespace WorkingWithNullInCSharp_GameConsole
         public string Name { get; set; }
         public int? DaysSinceLastLogin { get; set; }
         public DateTime? DateOfBirth { get; set; }
-
-
-
-        public PlayerCharacter()
-        {
-            DateOfBirth = null;
-            DaysSinceLastLogin = null;
-        }
+        public bool? IsNew { get; set; }
+ 
     }
 }

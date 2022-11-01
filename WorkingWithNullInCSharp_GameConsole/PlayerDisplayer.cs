@@ -32,6 +32,20 @@ namespace WorkingWithNullInCSharp_GameConsole
 
             }
 
+            if (player.IsNew is null)
+            {
+                Console.WriteLine("Player new status is unknown");
+            }
+            else if (player.IsNew == true)
+            {
+                Console.WriteLine("Player is new to the game");
+            }
+            else 
+            {
+                Console.WriteLine("Player is experienced");
+
+            }
+
         }
     }
 }
