@@ -12,7 +12,7 @@ namespace WorkingWithNullInCSharp_GameConsole
         {
             Console.WriteLine(player.Name);
 
-            if (player.DaysSinceLastLogin == -1)
+            if (player.DaysSinceLastLogin is null)
             {
                 Console.WriteLine("No value for DaysSinceLastLogin");
             }
@@ -22,7 +22,7 @@ namespace WorkingWithNullInCSharp_GameConsole
 
             }
 
-            if (player.DateOfBirth == DateTime.MinValue)
+            if (player.DateOfBirth is null)
             {
                 Console.WriteLine("No value for DateOfBirth");
             }
