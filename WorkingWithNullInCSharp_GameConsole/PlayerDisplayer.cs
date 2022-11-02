@@ -10,7 +10,7 @@ namespace WorkingWithNullInCSharp_GameConsole
     {
         public static void Write(PlayerCharacter player)
         {
-           
+
 
             if (string.IsNullOrWhiteSpace(player.Name))
             {
@@ -21,14 +21,13 @@ namespace WorkingWithNullInCSharp_GameConsole
                 Console.WriteLine(player.Name);
             }
 
-            if (player.DaysSinceLastLogin is null)
+            if (player.DaysSinceLastLogin.HasValue)
             {
-                Console.WriteLine("No value for DaysSinceLastLogin");
+                Console.WriteLine(player.DaysSinceLastLogin.Value);
             }
             else
             {
-                Console.WriteLine(player.DaysSinceLastLogin);
-
+                Console.WriteLine("No value for DaysSinceLastLogin");
             }
 
             if (player.DateOfBirth is null)
@@ -49,7 +48,7 @@ namespace WorkingWithNullInCSharp_GameConsole
             {
                 Console.WriteLine("Player is new to the game");
             }
-            else 
+            else
             {
                 Console.WriteLine("Player is experienced");
 
