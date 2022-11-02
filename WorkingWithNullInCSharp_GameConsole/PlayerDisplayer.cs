@@ -10,7 +10,16 @@ namespace WorkingWithNullInCSharp_GameConsole
     {
         public static void Write(PlayerCharacter player)
         {
-            Console.WriteLine(player.Name);
+           
+
+            if (string.IsNullOrWhiteSpace(player.Name))
+            {
+                Console.WriteLine("Player name is null or have only withe spaces");
+            }
+            else
+            {
+                Console.WriteLine(player.Name);
+            }
 
             if (player.DaysSinceLastLogin is null)
             {
